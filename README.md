@@ -1,14 +1,7 @@
-# Smart-Gardening
-In this project a gardening system has been automated using IoT in the Raspberry Pi platform.
-telegramapp.py, iotcontrol.py - These files controls the telegram bot.
-lampplanner.py, waterplanner.py- automates the optimum usage of water and light(generates problem files and execute the planner).
-smartGarden_domain.pddl, smartGarden_problem - The domain and sample problem file to automate watering of multiple plants.
-smartGardenlighting_domain.pddl, smartGardenlighting_problem - The domain and sample problem file to turn on/off lamp in the garden area based on present luminance level.
-water.py, lamp.py- handles the output of the planner turn on/off the plugwise connected to motor/lamp
-publish.py- publish to cloudmqtt broker
-subscribe.py-subscribe to cloudmqtt broker
-storeindb.py-store the subscribed data in the AWS RDS for monitoring and planning purpose.
-cnn.py- This script is used for training a CNN-based Machine Learning Model and the model can be saved as .h5 file
-PlantIdentification.py - This script is used for predicting the plant name and health status using the deployed ML model. The model can be downloaded from https://drive.google.com/open?id=1stVThnVNt8yhOze6h0iQPJXKuZLaV2cC
+The goal of this model was to recommend new products to customers of Santander Bank. This was done by comparing the products that a customer had in each month with the previous month. If a customer had a new product in a given month, that month's data would be used to train the model. In order to avoid recommending products that a customer already had, the month prior to the prediction, May 2016, would be compared to the prediction month, June 2016. Any products that a customer had in May 2016 would be removed from the prediction set.
 
-PLEASE NOTE: Install all the necessary packages mentioned in the respective script. 
+As part of the requirements for the Kaggle competition, only seven products were needed to be recommended to each customer. The seven products that were most frequently recommended were (English translations are in paraeneses): ind_recibo_ult1 (Direct Debit), ind_nom_pens_ult1 (Pensions), ind_nomina_ult1 (Payroll), ind_cco_fin_ult1 (Current Accounts), ind_tjcr_fin_ult1 (Credit Card), ind_cno_fin_ult1 (Payroll Account), and ind_ecue_fin_ult1 (e-account).
+
+The seven most common products that customers already had were: ind_cco_fin_ult1(Current Accounts), ind_recibo_ult1 (Direct Debit), ind_ctop_fin_ult1 (Particular Account), ind_ecue_fin_ult1 (e-account), ind_cno_fin_ult1 (Payroll Account), ind_nom_pens_ult1 (Pensions), and ind_nomina_ult1 (Payroll).
+
+Kaggle Link: https://www.kaggle.com/c/santander-product-recommendation/data
